@@ -13,7 +13,7 @@ func _ready():
 
 
 func UpdateUI():
-	$HUD/Points.text = str(int(Global.points)) + ' points'
+	$HUD/Points.text = str(int(Global.points)) + ' poimts'
 
 
 func _on_planet_pressed():
