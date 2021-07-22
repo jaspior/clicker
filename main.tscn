@@ -130,9 +130,36 @@ wait_time = 30
 [node name="Powerups" type="ColorRect" parent="Control/MarginContainer/HBoxContainer/VBoxContainer"]
 margin_top = 300.0
 margin_right = 374.0
-margin_bottom = 500.0
+margin_bottom = 560.0
 rect_min_size = Vector2( 300, 200 )
 color = Color( 0.192157, 0.152941, 0.278431, 1 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/MarginContainer/HBoxContainer/VBoxContainer/Powerups"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 355.0
+margin_bottom = 240.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MarginContainer/HBoxContainer/VBoxContainer/Powerups/ScrollContainer"]
+margin_right = 300.0
+margin_bottom = 308.0
+
+[node name="Panel" parent="Control/MarginContainer/HBoxContainer/VBoxContainer/Powerups/ScrollContainer/VBoxContainer" instance=ExtResource( 5 )]
+margin_right = 300.0
+rect_pivot_offset = Vector2( -749.701, 140 )
+
+[node name="Panel2" parent="Control/MarginContainer/HBoxContainer/VBoxContainer/Powerups/ScrollContainer/VBoxContainer" instance=ExtResource( 5 )]
+margin_top = 104.0
+margin_right = 300.0
+margin_bottom = 204.0
+
+[node name="Panel3" parent="Control/MarginContainer/HBoxContainer/VBoxContainer/Powerups/ScrollContainer/VBoxContainer" instance=ExtResource( 5 )]
+margin_top = 208.0
+margin_right = 300.0
+margin_bottom = 308.0
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
