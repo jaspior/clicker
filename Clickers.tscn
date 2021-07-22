@@ -24,6 +24,9 @@ margin_bottom = 30.0
 rect_min_size = Vector2( 60, 60 )
 icon = ExtResource( 2 )
 expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureProgress" type="TextureProgress" parent="."]
 anchor_left = 1.0

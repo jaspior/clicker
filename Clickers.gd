@@ -2,16 +2,18 @@ extends Panel
 
 export var price = 10
 var quantity = 0
-var cps = 1
+export var cps = 1
+export var wait_time = 1
 
 func _ready():
+	$Timer.wait_time = wait_time
 	add_to_group("Store")
 	updateUI()
 
 
 func _process(delta):
 	if quantity >= 1:
-		$TextureProgress.value = $Timer.time_left
+		$TextureProgress.value = $Timer.time_left/wait_time
 
 
 func _on_TextureButton_pressed():
@@ -21,16 +23,16 @@ func _on_TextureButton_pressed():
 		Global.points-= price
 		quantity+=1
 		get_tree().call_group("Store","UpdateUI")
-		price+=pow(1.1,quantity)
-		cps = cps*quantity
+		price = 1.07*price
+		cps = 1.07*cps
 		updateUI()
 		
 		
 		
 func updateUI():
 	$Quantity.text = "Quantity :"+str(quantity)
-	$Price.text = "Price :"+str(price)
-	$Cps.text = "cps :"+str(cps)
+	$Price.text = "Price :"+str(int(price))
+	$Cps.text = "cps :"+str(int(cps))
 	#get_tree().call_group("Store","add_points",cps)
 
 func _on_Timer_timeout():
