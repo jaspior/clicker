@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/clock2.png" type="Texture" id=1]
 [ext_resource path="res://assets/rocket.png" type="Texture" id=2]
@@ -6,6 +6,11 @@
 [ext_resource path="res://Clickers.gd" type="Script" id=4]
 [ext_resource path="res://assets/Postit.png" type="Texture" id=5]
 [ext_resource path="res://assets/Wahroonga.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/Gatonauta.png" type="Texture" id=7]
+[ext_resource path="res://assets/Gato_genérico2.png" type="Texture" id=8]
+[ext_resource path="res://assets/Gato_de_combate3.png" type="Texture" id=9]
+[ext_resource path="res://assets/Gatileu Gatilei.png" type="Texture" id=10]
+[ext_resource path="res://assets/Cätinger.png" type="Texture" id=11]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -134,10 +139,43 @@ __meta__ = {
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="Rocket" type="Sprite" parent="."]
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="rocket" type="Sprite" parent="Sprites"]
+visible = false
 position = Vector2( 24.1329, 34.7963 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
+
+[node name="gatonauta" type="Sprite" parent="Sprites"]
+visible = false
+position = Vector2( 35.3789, 41.6222 )
+scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 7 )
+
+[node name="basic" type="Sprite" parent="Sprites"]
+visible = false
+position = Vector2( 26.6933, 39.4715 )
+scale = Vector2( 0.06, 0.06 )
+texture = ExtResource( 8 )
+
+[node name="normal" type="Sprite" parent="Sprites"]
+visible = false
+position = Vector2( 31.839, 38.956 )
+scale = Vector2( 0.04, 0.04 )
+texture = ExtResource( 9 )
+
+[node name="gatileu" type="Sprite" parent="Sprites"]
+visible = false
+position = Vector2( 33.7119, 34.0865 )
+scale = Vector2( 0.06, 0.06 )
+texture = ExtResource( 10 )
+
+[node name="schrodinger" type="Sprite" parent="Sprites"]
+visible = false
+position = Vector2( 23.5983, 30.7153 )
+scale = Vector2( 0.14, 0.14 )
+texture = ExtResource( 11 )
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

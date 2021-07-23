@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://assets/planet2.png" type="Texture" id=1]
 [ext_resource path="res://assets/planet.png" type="Texture" id=2]
@@ -6,11 +6,333 @@
 [ext_resource path="res://assets/Wahroonga.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Clickers.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/Background.png" type="Texture" id=6]
+[ext_resource path="res://assets/Gato_genérico2.png" type="Texture" id=7]
+[ext_resource path="res://assets/Gato_genérico4.png" type="Texture" id=8]
+[ext_resource path="res://assets/Gato_genérico3.png" type="Texture" id=9]
+[ext_resource path="res://assets/Gato_genérico.png" type="Texture" id=10]
+[ext_resource path="res://assets/Gato_de_combate3.png" type="Texture" id=11]
+[ext_resource path="res://assets/Gato_de_combate.png" type="Texture" id=12]
+[ext_resource path="res://assets/Gato_de_combate2.png" type="Texture" id=13]
+[ext_resource path="res://assets/Gato_de_combate4.png" type="Texture" id=14]
+[ext_resource path="res://assets/Gatileu Gatilei.png" type="Texture" id=15]
+[ext_resource path="res://assets/Cätinger.png" type="Texture" id=16]
+[ext_resource path="res://assets/Céu.png" type="Texture" id=17]
+[ext_resource path="res://assets/Gatonauta.png" type="Texture" id=18]
+[ext_resource path="res://assets/rocket.png" type="Texture" id=19]
+[ext_resource path="res://assets/Marte.png" type="Texture" id=20]
+[ext_resource path="res://assets/Urano.png" type="Texture" id=21]
+[ext_resource path="res://assets/Terra.png" type="Texture" id=22]
+[ext_resource path="res://assets/Sol.png" type="Texture" id=23]
 
 [sub_resource type="DynamicFont" id=1]
 size = 35
 outline_color = Color( 0.4, 0.501961, 0.972549, 1 )
 font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Event1"
+length = 8.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprites/basic1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.4, 2, 4, 6, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 78.3991, 384.868 ), Vector2( 358.73, 349.945 ), Vector2( 78.3991, 384.868 ), Vector2( 358.73, 349.945 ), Vector2( 78.3991, 384.868 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprites/basic1:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 2, 4, 6, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 180.0, 360.0, 180.0, 360.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("sprites/basic2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.2, 5, 8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 73.6369, 97.5487 ), Vector2( 357.782, 529.322 ), Vector2( 73.6369, 97.5487 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("sprites/basic2:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 5, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 180.0, 360.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("sprites/basic3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.3, 2, 3.7, 6, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 256.188, 61.0385 ), Vector2( 222.853, 535.671 ), Vector2( 256.188, 61.0385 ), Vector2( 222.853, 535.671 ), Vector2( 256.188, 61.0385 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("sprites/basic3:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.3, 2, 3.7, 6, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 180.0, 360.0, 180.0, 360.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("sprites/basic4:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.1, 3.1, 8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 374.395, 93.9181 ), Vector2( 49.8086, 532.866 ), Vector2( 374.395, 93.9181 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("sprites/basic4:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.1, 3.1, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 180.0, 360.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("sprites/normal1:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 4, 8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 78.9933, 147.039 ), Vector2( 371.993, 147.039 ), Vector2( 78.9933, 147.039 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("sprites/normal1:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8, 4, 4.2, 4.4, 4.6, 4.8, 5, 5.2, 5.4, 5.6, 5.8, 6, 6.2, 6.4, 6.6, 6.8, 7, 7.2, 7.4, 7.6, 7.8, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("sprites/normal2:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 4, 8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 78.9933, 197.039 ), Vector2( 371.993, 197.039 ), Vector2( 78.9933, 197.039 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("sprites/normal2:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8, 4, 4.2, 4.4, 4.6, 4.8, 5, 5.2, 5.4, 5.6, 5.8, 6, 6.2, 6.4, 6.6, 6.8, 7, 7.2, 7.4, 7.6, 7.8, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("sprites/normal3:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 4, 8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 78.9933, 249.039 ), Vector2( 371.993, 249.039 ), Vector2( 78.9933, 249.039 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("sprites/normal3:rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8, 4, 4.2, 4.4, 4.6, 4.8, 5, 5.2, 5.4, 5.6, 5.8, 6, 6.2, 6.4, 6.6, 6.8, 7, 7.2, 7.4, 7.6, 7.8, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0 ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("sprites/normal4:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 4, 8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 78.9933, 300.039 ), Vector2( 371.993, 300.039 ), Vector2( 78.9933, 300.039 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("sprites/normal4:rotation_degrees")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8, 4, 4.2, 4.4, 4.6, 4.8, 5, 5.2, 5.4, 5.6, 5.8, 6, 6.2, 6.4, 6.6, 6.8, 7, 7.2, 7.4, 7.6, 7.8, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0, 0.0, -1.0, 1.0 ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("sprites/normal1:scale")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 4, 8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( -0.05, 0.05 ), Vector2( 0.05, 0.05 ), Vector2( -0.05, 0.05 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("sprites/normal2:scale")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 4, 8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( -0.05, 0.05 ), Vector2( 0.05, 0.05 ), Vector2( -0.05, 0.05 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("sprites/normal3:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 4, 8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( -0.05, 0.05 ), Vector2( 0.05, 0.05 ), Vector2( -0.05, 0.05 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("sprites/normal4:scale")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 4, 8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( -0.05, 0.05 ), Vector2( 0.05, 0.05 ), Vector2( -0.05, 0.05 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("sprites/gatileu:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0, 4, 8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 320.452, 333.773 ), Vector2( 320.452, 333.773 ), Vector2( 320.452, 333.773 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("sprites/gatileu:rotation_degrees")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 4, 8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 40.8862, 0.0 ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("sprites/gatileu:scale")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("sprites/gatinger:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 89.8984, 439.004 ) ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("sprites/gatinger:rotation_degrees")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3, 3.3, 3.6, 3.9, 4.2, 4.5, 4.8, 5.1, 5.4, 5.7, 6, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8, 8.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0.0, 3.0, 0.0, -3.0, 3.0, 0.0, -3.0, 3.0, 0.0, -3.0, 3.0, 0.0, -3.0, 3.0, 0.0, -3.0, 3.0, 0.0, -3.0, 3.0, 0.0, -3.0, 3.0, 0.0, -3.0, 3.0, 0.0, -3.0 ]
+}
 
 [node name="Main" type="Node"]
 script = ExtResource( 3 )
@@ -90,6 +412,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="sky" type="Sprite" parent="Control/MarginContainer/HBoxContainer/Game_screen/Game"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 202.285, 282.175 )
+rotation = -0.020944
+scale = Vector2( 0.332538, 0.462866 )
+texture = ExtResource( 17 )
+
 [node name="planet" type="TextureButton" parent="Control/MarginContainer/HBoxContainer/Game_screen/Game"]
 margin_left = 143.0
 margin_top = 393.0
@@ -161,6 +490,7 @@ margin_top = 71.2999
 margin_right = 543.58
 margin_bottom = 171.3
 rect_rotation = 3.0
+price = 1
 
 [node name="Panel2" parent="Control/MarginContainer/HBoxContainer/Button_area" instance=ExtResource( 5 )]
 margin_left = 804.889
@@ -168,7 +498,9 @@ margin_top = 66.8101
 margin_right = 904.889
 margin_bottom = 166.81
 rect_rotation = -2.0
+price = 1
 color = 2
+cat_type = 2
 
 [node name="Panel3" parent="Control/MarginContainer/HBoxContainer/Button_area" instance=ExtResource( 5 )]
 margin_left = 629.5
@@ -176,7 +508,9 @@ margin_top = 79.4027
 margin_right = 729.5
 margin_bottom = 179.403
 rect_rotation = 1.0
+price = 1
 color = 1
+cat_type = 1
 
 [node name="Panel4" parent="Control/MarginContainer/HBoxContainer/Button_area" instance=ExtResource( 5 )]
 margin_left = 504.58
@@ -184,7 +518,9 @@ margin_top = 197.322
 margin_right = 604.58
 margin_bottom = 297.322
 rect_rotation = -4.0
+price = 1
 color = 3
+cat_type = 3
 
 [node name="Panel5" parent="Control/MarginContainer/HBoxContainer/Button_area" instance=ExtResource( 5 )]
 margin_left = 779.869
@@ -192,7 +528,9 @@ margin_top = 196.2
 margin_right = 879.869
 margin_bottom = 296.2
 rect_rotation = 4.0
+price = 1
 color = 4
+cat_type = 4
 
 [node name="Button_area2" type="Node2D" parent="Control/MarginContainer/HBoxContainer"]
 position = Vector2( 0, 280 )
@@ -247,5 +585,113 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Animations" type="Node2D" parent="."]
+
+[node name="anim" type="AnimationPlayer" parent="Animations"]
+anims/Event1 = SubResource( 2 )
+
+[node name="sprites" type="Node2D" parent="Animations"]
+
+[node name="Planets" type="Node2D" parent="Animations/sprites"]
+
+[node name="Terra" type="Sprite" parent="Animations/sprites/Planets"]
+visible = false
+position = Vector2( 203.403, 466.048 )
+scale = Vector2( 0.798185, 0.798185 )
+texture = ExtResource( 22 )
+
+[node name="Sol" type="Sprite" parent="Animations/sprites/Planets"]
+visible = false
+position = Vector2( 133.985, 148.859 )
+scale = Vector2( 0.636345, 0.636345 )
+texture = ExtResource( 23 )
+
+[node name="Urano" type="Sprite" parent="Animations/sprites/Planets"]
+visible = false
+position = Vector2( 349.159, 184.215 )
+scale = Vector2( 0.548474, 0.548474 )
+texture = ExtResource( 21 )
+
+[node name="Marte" type="Sprite" parent="Animations/sprites/Planets"]
+visible = false
+position = Vector2( 385.635, 536.563 )
+scale = Vector2( 0.790855, 0.790855 )
+texture = ExtResource( 20 )
+
+[node name="Gatonauta" type="Node2D" parent="Animations/sprites"]
+
+[node name="Gatonauta" type="Sprite" parent="Animations/sprites/Gatonauta"]
+visible = false
+position = Vector2( 241.268, 376.908 )
+rotation = 0.151922
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 18 )
+
+[node name="rocket" type="Sprite" parent="Animations/sprites/Gatonauta"]
+visible = false
+position = Vector2( 174.049, 414.613 )
+rotation = -0.288435
+texture = ExtResource( 19 )
+
+[node name="basic1" type="Sprite" parent="Animations/sprites"]
+visible = false
+position = Vector2( 78.3991, 384.868 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 10 )
+
+[node name="basic2" type="Sprite" parent="Animations/sprites"]
+visible = false
+position = Vector2( 73.6369, 97.5487 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 7 )
+
+[node name="basic3" type="Sprite" parent="Animations/sprites"]
+visible = false
+position = Vector2( 256.188, 61.0385 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 9 )
+
+[node name="basic4" type="Sprite" parent="Animations/sprites"]
+visible = false
+position = Vector2( 374.395, 93.9181 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 8 )
+
+[node name="normal1" type="Sprite" parent="Animations/sprites"]
+visible = false
+position = Vector2( 78.9933, 147.039 )
+scale = Vector2( -0.05, 0.05 )
+texture = ExtResource( 12 )
+
+[node name="normal2" type="Sprite" parent="Animations/sprites"]
+visible = false
+position = Vector2( 78.9933, 197.039 )
+scale = Vector2( -0.05, 0.05 )
+texture = ExtResource( 13 )
+
+[node name="normal3" type="Sprite" parent="Animations/sprites"]
+visible = false
+position = Vector2( 78.9933, 249.039 )
+scale = Vector2( -0.05, 0.05 )
+texture = ExtResource( 11 )
+
+[node name="normal4" type="Sprite" parent="Animations/sprites"]
+visible = false
+position = Vector2( 78.9933, 300.039 )
+scale = Vector2( -0.05, 0.05 )
+texture = ExtResource( 14 )
+
+[node name="gatileu" type="Sprite" parent="Animations/sprites"]
+visible = false
+position = Vector2( 320.452, 333.773 )
+scale = Vector2( 0.2, 0.162091 )
+texture = ExtResource( 15 )
+
+[node name="gatinger" type="Sprite" parent="Animations/sprites"]
+visible = false
+position = Vector2( 89.8984, 439.004 )
+scale = Vector2( -0.6, 0.6 )
+texture = ExtResource( 16 )
 
 [connection signal="pressed" from="Control/MarginContainer/HBoxContainer/Game_screen/Game/planet" to="." method="_on_planet_pressed"]
