@@ -37,7 +37,7 @@ func _on_TextureButton_pressed():
 			Global.gatonauta_quantity += 1
 		get_tree().call_group("Store","UpdateUI")
 		price = 1.07*price
-		cps = 1.07*cps
+		cps = 1.07*(cps + (Global.multiplier - 1))
 		updateUI()
 		
 		

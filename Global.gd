@@ -8,3 +8,6 @@ var normal_quantity = 0
 var gatileu_quantity = 0
 var catinger_quantity = 0
 var gatonauta_quantity = 0
+var multiplier = 1
+
+var price = 10

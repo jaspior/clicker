@@ -2,7 +2,6 @@ extends Node
 
 
 var basevalue = 1
-var multiplier = 1
 var counter = 0 
 
 
@@ -11,6 +10,10 @@ func _ready():
 	add_to_group("Store")
 	add_to_group("Powerup")
 	UpdateUI()
+	$Control/MarginContainer/HBoxContainer/Button_area/Panel2.hide()
+	$Control/MarginContainer/HBoxContainer/Button_area/Panel3.hide()
+	$Control/MarginContainer/HBoxContainer/Button_area/Panel4.hide()
+	$Control/MarginContainer/HBoxContainer/Button_area/Panel5.hide()
 	
 
 func _process(delta):
@@ -26,7 +29,7 @@ func UpdateUI():
 
 
 func _on_planet_pressed():
-	add_points(basevalue*multiplier)
+	add_points(basevalue*Global.multiplier)
 	var star = load("res://Star.tscn").instance()
 	star.position = get_viewport().get_mouse_position()
 	add_child(star)
@@ -38,6 +41,7 @@ func add_points(pts):
 func basic_counter():
 	if Global.basic_quantity == 1:
 		$Animations/sprites/basic1.show()
+		$Control/MarginContainer/HBoxContainer/Button_area/Panel3.show()
 	elif Global.basic_quantity == 2:
 		$Animations/sprites/basic2.show()
 	elif Global.basic_quantity == 3:
@@ -48,6 +52,7 @@ func basic_counter():
 func normal_counter():
 	if Global.normal_quantity == 1:
 		$Animations/sprites/normal1.show()
+		$Control/MarginContainer/HBoxContainer/Button_area/Panel2.show()
 	elif Global.normal_quantity == 2:
 		$Animations/sprites/normal2.show()
 	elif Global.normal_quantity == 3:
@@ -58,6 +63,7 @@ func normal_counter():
 func gatileu_counter():
 	if Global.gatileu_quantity == 1:
 		$Animations/sprites/gatileu.show()
+		$Control/MarginContainer/HBoxContainer/Button_area/Panel4.show()
 	elif Global.gatileu_quantity == 2:
 		$Animations/sprites/Planets/Terra.show()
 	elif Global.gatileu_quantity == 3:
@@ -70,6 +76,7 @@ func gatileu_counter():
 func catinger_counter():
 	if Global.catinger_quantity == 1:
 		$Animations/sprites/gatinger.show()
+		$Control/MarginContainer/HBoxContainer/Button_area/Panel5.show()
 	elif Global.catinger_quantity == 2:
 		$Control/MarginContainer/HBoxContainer/Game_screen/Game/sky.modulate = Color(1,1,1,.2)
 	elif Global.catinger_quantity == 3:

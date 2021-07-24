@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://assets/planet2.png" type="Texture" id=1]
 [ext_resource path="res://assets/planet.png" type="Texture" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://assets/Urano.png" type="Texture" id=21]
 [ext_resource path="res://assets/Terra.png" type="Texture" id=22]
 [ext_resource path="res://assets/Sol.png" type="Texture" id=23]
+[ext_resource path="res://PowerUp.tscn" type="PackedScene" id=24]
 
 [sub_resource type="DynamicFont" id=1]
 size = 35
@@ -571,6 +572,73 @@ text = "Poerup"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="GridContainer" type="GridContainer" parent="Control/MarginContainer/HBoxContainer/Button_area2"]
+margin_left = 473.0
+margin_top = 108.0
+margin_right = 933.0
+margin_bottom = 248.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = 10
+custom_constants/hseparation = 10
+columns = 6
+
+[node name="Panel" parent="Control/MarginContainer/HBoxContainer/Button_area2/GridContainer" instance=ExtResource( 24 )]
+
+[node name="Panel2" parent="Control/MarginContainer/HBoxContainer/Button_area2/GridContainer" instance=ExtResource( 24 )]
+margin_left = 70.0
+margin_right = 130.0
+
+[node name="Panel3" parent="Control/MarginContainer/HBoxContainer/Button_area2/GridContainer" instance=ExtResource( 24 )]
+margin_left = 140.0
+margin_right = 200.0
+
+[node name="Panel4" parent="Control/MarginContainer/HBoxContainer/Button_area2/GridContainer" instance=ExtResource( 24 )]
+margin_left = 210.0
+margin_right = 270.0
+
+[node name="Panel5" parent="Control/MarginContainer/HBoxContainer/Button_area2/GridContainer" instance=ExtResource( 24 )]
+margin_left = 280.0
+margin_right = 340.0
+
+[node name="Panel6" parent="Control/MarginContainer/HBoxContainer/Button_area2/GridContainer" instance=ExtResource( 24 )]
+margin_left = 350.0
+margin_right = 410.0
+
+[node name="Panel7" parent="Control/MarginContainer/HBoxContainer/Button_area2/GridContainer" instance=ExtResource( 24 )]
+margin_top = 70.0
+margin_bottom = 130.0
+
+[node name="Panel8" parent="Control/MarginContainer/HBoxContainer/Button_area2/GridContainer" instance=ExtResource( 24 )]
+margin_left = 70.0
+margin_top = 70.0
+margin_right = 130.0
+margin_bottom = 130.0
+
+[node name="Panel9" parent="Control/MarginContainer/HBoxContainer/Button_area2/GridContainer" instance=ExtResource( 24 )]
+margin_left = 140.0
+margin_top = 70.0
+margin_right = 200.0
+margin_bottom = 130.0
+
+[node name="Panel10" parent="Control/MarginContainer/HBoxContainer/Button_area2/GridContainer" instance=ExtResource( 24 )]
+margin_left = 210.0
+margin_top = 70.0
+margin_right = 270.0
+margin_bottom = 130.0
+
+[node name="Panel11" parent="Control/MarginContainer/HBoxContainer/Button_area2/GridContainer" instance=ExtResource( 24 )]
+margin_left = 280.0
+margin_top = 70.0
+margin_right = 340.0
+margin_bottom = 130.0
+
+[node name="Panel12" parent="Control/MarginContainer/HBoxContainer/Button_area2/GridContainer" instance=ExtResource( 24 )]
+margin_left = 350.0
+margin_top = 70.0
+margin_right = 410.0
+margin_bottom = 130.0
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
